@@ -1,11 +1,8 @@
 const initialState = {
 	ui: {
-		weatherPage: {
-			fiveDayForecasts: [],
-			hourlyForecasts: [],
-			locations: []
-		},
-		ajaxCallsInProgress: 0
+		posts: [],
+		startIndex: 0,
+		isLoading: false
 	},
 	server: {}
 };

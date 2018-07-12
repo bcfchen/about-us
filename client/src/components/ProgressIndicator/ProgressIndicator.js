@@ -6,7 +6,7 @@ import { propTypes } from "./types";
 const ProgressIndicator = ({ classes }) => {
     return (
         <div className="progress-indicator">
-            <CircularProgress variant="indeterminate" className={classes.progress} color="inherit" />
+            <CircularProgress variant="indeterminate" className={classes.progress} />
         </div>
     );
 }
@@ -15,7 +15,8 @@ const styles = theme => ({
     progress: {
         top: "40%",
         left: "45%",
-        position: "fixed"
+        position: "fixed",
+        zIndex: "999"
     }
 });
 

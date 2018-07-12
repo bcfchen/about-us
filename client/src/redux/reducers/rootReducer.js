@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import weatherPageReducer from './weatherPageReducer';
+import blogReducer from './blogReducer';
 import ajaxCallsInProgress from './ajaxStatusReducer';
 
 const rootReducer = combineReducers({
-	weatherPage: weatherPageReducer,
-	ajaxCallsInProgress
+	blogPage: blogReducer
 });
 
 export default rootReducer;
