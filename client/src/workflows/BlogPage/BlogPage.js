@@ -4,15 +4,17 @@ import toast from "toastr";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
 import BlogPostList from "../../components/BlogPostList/BlogPostList";
 import BlogSearch from "../../components/BlogSearch/BlogSearch";
-import ProgressIndicator from "../../components/ProgressIndicator/ProgressIndicator";
-const LIST_SIZE = 10;
-class BlogPage extends React.Component {
+import * as _ from 'lodash';
+import { propTypes } from './types';
+
+
+export class BlogPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isLoading: true };
+        this.handleSearch = this.handleSearch.bind(this);
     }
 
     componentDidMount() {
@@ -24,34 +26,34 @@ class BlogPage extends React.Component {
         });
     }
 
-
+    handleSearch(e) { this.props.blogActions.searchPostByText(e.target.value); };
 
     render() {
         return (
             <div>
-                <BlogSearch />
-                {this.state.isLoading && <ProgressIndicator />}
-                <BlogPostList isLoading={this.state.isLoading} postsToRender={this.props.postsToRender} />
-                <div className="buttons-container">
-                    <Button variant="contained" >Prev</Button>
-                    <Button variant="contained" disabled={true}>Next</Button>
+                <BlogSearch searchText={this.props.searchText} onSearch={this.handleSearch} />
+                <BlogPostList isLoading={this.state.isLoading} postsToRender={this.props.posts} />
+                <div className="btns-container">
+                    <Button className="prev-btn" variant="contained" disabled={!this.props.prevButtonActive} onClick={this.props.blogActions.prevPage}>Prev</Button>
+                    <Button className="next-btn" variant="contained" disabled={!this.props.nextButtonActive} onClick={this.props.blogActions.nextPage}>Next</Button>
                 </div>
             </div>);
     }
 }
 
+const mapDispatchToProps = dispatch => {
+    return { blogActions: bindActionCreators(blogActions, dispatch) }
+};
+
 const mapStateToProps = (state, ownProps) => {
-    let postsToRender = state.blogPage.posts.slice(state.startIndex, LIST_SIZE);
+    let blogPageState = state.blogPage;
     return {
-        postsToRender,
-        startIndex: state.startIndex
+        posts: blogPageState.posts.slice(blogPageState.startIndex, blogPageState.endIndex),
+        prevButtonActive: blogPageState.prevButtonActive,
+        nextButtonActive: blogPageState.nextButtonActive,
+        searchText: blogPageState.searchText
     };
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        blogActions: bindActionCreators(blogActions, dispatch)
-    }
-};
-
+BlogPage.propTypes = propTypes;
 export default connect(mapStateToProps, mapDispatchToProps)(BlogPage);

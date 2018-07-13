@@ -1,14 +1,19 @@
 import * as types from "../constants/action-types";
 import initialState from './initialState';
+import BlogPageState from "./BlogPageState";
 
 export default function blogReducer(state = initialState.ui, action) {
-    let newState;
+    const INCREMENT = 10;
+    let newState, builder = new BlogPageState.builder().init({ ...state }, INCREMENT);
     switch (action.type) {
         case types.GET_BLOG_POSTS_SUCCESS:
-            newState = { ...state, posts: action.posts, startIndex: 0 };
+            newState = builder.forSearchResults(action.posts, action.searchText).build();
             break;
-        case types.START_INDEX_UPDATED:
-            newState = { ...state, startIndex: action.startIndex };
+        case types.NEXT_PAGE:
+            newState = builder.forNextPage().build();
+            break;
+        case types.PREV_PAGE:
+            newState = builder.forPrevPage().build();
             break;
         default:
             break;

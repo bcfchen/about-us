@@ -2,7 +2,10 @@ const initialState = {
 	ui: {
 		posts: [],
 		startIndex: 0,
-		isLoading: false
+		endIndex: 0,
+		prevButtonActive: true,
+		nextButtonActive: true,
+		searchText: ""
 	},
 	server: {}
 };
