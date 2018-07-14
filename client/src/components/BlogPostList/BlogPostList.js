@@ -8,9 +8,6 @@ import ProgressIndicator from "../ProgressIndicator/ProgressIndicator";
 import { propTypes } from './types';
 
 const styles = theme => ({
-    width: '20%',
-    height: 30,
-    maxWidth: 360,
     backgroundColor: theme.palette.background.paper
 });
 
@@ -19,8 +16,8 @@ const BlogPostList = ({ isLoading, postsToRender }) => {
         .map(post => <ListItem key={post.id}><BlogPostCard post={post} /></ListItem>);
 
     return (
-        <div>
-            {this.isLoading && <ProgressIndicator />}
+        <div className="blog-post-list-container">
+            {isLoading && <ProgressIndicator />}
             <Grow in={!isLoading}>
                 <div className="blog-posts-container">
                     <List>{listItems}</List>

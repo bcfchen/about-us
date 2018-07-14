@@ -13,22 +13,23 @@ import { propTypes } from './types';
 export class BlogPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { isLoading: true, timer: null };
+        this.state = { isLoading: true };
         this.updateSearchText = this.updateSearchText.bind(this);
         this.updatePosts = _.debounce(this.updatePosts.bind(this), 300);
     }
 
     componentDidMount() {
-        this.props.blogActions.searchPostByText().then(() => {
+        this.updatePosts();
+    }
+
+    updatePosts(searchText) {
+        this.setState({ isLoading: true });
+        this.props.blogActions.searchPostByText(searchText).then(() => {
             this.setState({ isLoading: false })
         }).catch(err => {
             toast.error(err.message);
             this.setState({ isLoading: false })
         });
-    }
-
-    updatePosts(val) {
-        this.props.blogActions.searchPostByText(val);
     }
 
     updateSearchText(searchText) {

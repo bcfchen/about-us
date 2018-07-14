@@ -5,12 +5,14 @@ import Typography from '@material-ui/core/Typography';
 import { propTypes } from './types';
 
 const BlogPostCard = ({ post }) => {
-    return (<Card>
-        <CardContent>
-            <Typography variant="headline">{post.title}</Typography>
-            <Typography>{post.body}</Typography>
-        </CardContent>
-    </Card>);
+    return (
+        <Card>
+            <CardContent>
+                <Typography variant="title">{post.title}</Typography>
+                <Typography varient="body1">{post.body}</Typography>
+            </CardContent>
+        </Card>
+    );
 };
 
 BlogPostCard.propTypes = propTypes;
