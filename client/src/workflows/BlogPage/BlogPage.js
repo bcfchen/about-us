@@ -13,8 +13,9 @@ import { propTypes } from './types';
 export class BlogPage extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { isLoading: true };
-        this.handleSearch = this.handleSearch.bind(this);
+        this.state = { isLoading: true, timer: null };
+        this.updateSearchText = this.updateSearchText.bind(this);
+        this.updatePosts = _.debounce(this.updatePosts.bind(this), 300);
     }
 
     componentDidMount() {
@@ -26,12 +27,18 @@ export class BlogPage extends React.Component {
         });
     }
 
-    handleSearch(e) { this.props.blogActions.searchPostByText(e.target.value); };
+    updatePosts(val) {
+        this.props.blogActions.searchPostByText(val);
+    }
+
+    updateSearchText(searchText) {
+        this.props.blogActions.updateSearchText(searchText);
+    };
 
     render() {
         return (
             <div>
-                <BlogSearch searchText={this.props.searchText} onSearch={this.handleSearch} />
+                <BlogSearch searchText={this.props.searchText} updatePosts={this.updatePosts} updateSearchText={this.updateSearchText} />
                 <BlogPostList isLoading={this.state.isLoading} postsToRender={this.props.posts} />
                 <div className="btns-container">
                     <Button className="prev-btn" variant="contained" disabled={!this.props.prevButtonActive} onClick={this.props.blogActions.prevPage}>Prev</Button>

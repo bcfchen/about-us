@@ -16,9 +16,13 @@ class BlogPageStateBuilder {
         return this;
     }
 
+    forSearchText(searchText = "") {
+        this.state.searchText = searchText;
+        return this;
+    }
+
     forSearchResults(posts, searchText = "") {
         this.state.setPosts(posts);
-        this.state.searchText = searchText;
         return this;
     }
 

@@ -6,6 +6,9 @@ export default function blogReducer(state = initialState.ui, action) {
     const INCREMENT = 10;
     let newState, builder = new BlogPageState.builder().init({ ...state }, INCREMENT);
     switch (action.type) {
+        case types.SEARCH_TEXT_UPDATED:
+            newState = builder.forSearchText(action.searchText).build();
+            break;
         case types.GET_BLOG_POSTS_SUCCESS:
             newState = builder.forSearchResults(action.posts, action.searchText).build();
             break;
