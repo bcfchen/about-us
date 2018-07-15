@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import { propTypes } from './types';
 
 const BlogButtons = ({ prevButtonActive, nextButtonActive, prevPage, nextPage }) => {
     return (<div className="btns-container">
@@ -22,4 +23,5 @@ const BlogButtons = ({ prevButtonActive, nextButtonActive, prevPage, nextPage })
     </div>);
 };
 
+BlogButtons.propTypes = propTypes;
 export default BlogButtons;
