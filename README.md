@@ -16,21 +16,14 @@ npm install
 ```
 
 ### To run
-Check that you're in the __weatherman/client__ folder and run the project by:
+Check that you're in the __blogpost/client__ folder and run the project by:
 ```
 npm start
 ```
 The page should automatically open up in your browser at __localhost:3000__
 
-### To use
 Navigate to localhost:3000 (if not there already) to view all available posts
-![alt text](https://s8.postimg.cc/dovz9n54l/Screen_Shot_2018-07-03_at_2.03.57_AM.png "Nighttime Screenshot")
-
-
-Start typing in the textbox on the upper right to search for posts by keywords
-
-
-![alt text](https://s8.postimg.cc/5w5bhnjpx/Screen_Shot_2018-07-03_at_2.04.31_AM.png "Daytime Screenshot")
+![alt text](https://s15.postimg.cc/7lx74sse3/Screen_Shot_2018-07-15_at_11.12.07_PM.png "Search Blog Posts")
 
 Click "Prev" or "Next" to navigate to previous/next pages
 
