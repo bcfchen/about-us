@@ -6,34 +6,20 @@ import { withStyles } from '@material-ui/core/styles';
 import Grow from '@material-ui/core/Grow';
 import ProgressIndicator from "../ProgressIndicator/ProgressIndicator";
 import { propTypes } from './types';
-
-const styles = theme => ({
-    root: {
-        marginRight: "auto",
-        marginLeft: "auto",
-        maxWidth: "650px",
-        minHeight: "400px",
-        maxHeight: "400px",
-        backgroundColor: theme.palette.background.transparent,
-    },
-    overrides: {
-        MuiList: { // Name of the component ⚛️ / style sheet
-            root: { // Name of the rule
-                color: 'white', // Some CSS
-            },
-        }
-    }
-});
+import Typography from '@material-ui/core/Typography';
+import { styles } from "./styles";
 
 const BlogPostList = ({ isLoading, postsToRender, classes }) => {
     let listItems = postsToRender
         .map(post => <ListItem key={post.id}><BlogPostCard post={post} /></ListItem>);
-
+    let noPostsToRender = listItems.length === 0 && !isLoading;
     return (
         <div className={classes.root}>
             {isLoading && <ProgressIndicator />}
+            {noPostsToRender
+                && <Typography className={classes.placeHolder} variant="display1">No posts available :(</Typography>}
             <Grow in={!isLoading}>
-                <List>{listItems}</List>
+                <List className={classes.list}>{listItems}</List>
             </Grow>
         </div>
     );

@@ -1,11 +1,9 @@
 import axios from "axios";
 import BlogPostItem from "../../models/BlogPostItem";
 const config = require("../config.json");
-const dummyData = require("./dummy.json");
 
 export const searchPosts = async (searchText) => {
-    // let postsResponse = await Promise.resolve(dummyData);
-    let postsResponse = await axios.get(config.blogPostsUrl);
+    let postsResponse = await axios.get(config.blogPostsUrl + "123");
     if (!postsResponse || postsResponse.length === 0) { return []; }
     let blogPostItems = postsResponse.data.map(post => new BlogPostItem(post));
 

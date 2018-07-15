@@ -2,17 +2,7 @@ import React from "react";
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import { propTypes } from './types';
-
-const styles = theme => ({
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    textField: {
-        marginRight: "0%",
-        width: 200,
-    }
-});
+import { styles } from "./styles";
 
 const BlogSearch = ({ searchText, updateSearchText, updatePosts, classes }) => {
     return (

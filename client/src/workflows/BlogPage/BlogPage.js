@@ -3,12 +3,11 @@ import * as blogActions from "../../redux/actions/blogActions";
 import toast from "toastr";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import Button from '@material-ui/core/Button';
 import BlogPostList from "../../components/BlogPostList/BlogPostList";
 import BlogSearch from "../../components/BlogSearch/BlogSearch";
+import BlogButtons from "../../components/BlogButtons/BlogButtons";
 import * as _ from 'lodash';
 import { propTypes } from './types';
-import Grid from '@material-ui/core/Grid';
 
 export class BlogPage extends React.Component {
     constructor(props) {
@@ -41,22 +40,11 @@ export class BlogPage extends React.Component {
             <div>
                 <BlogSearch searchText={this.props.searchText} updatePosts={this.updatePosts} updateSearchText={this.updateSearchText} />
                 <BlogPostList isLoading={this.state.isLoading} postsToRender={this.props.posts} />
-                <div className="btns-container">
-                    <Grid container>
-                        <Grid item xs>
-                            <Button className="prev-btn"
-                                variant="contained"
-                                disabled={!this.props.prevButtonActive}
-                                onClick={this.props.blogActions.prevPage}>Prev</Button>
-                        </Grid>
-                        <Grid item xs>
-                            <Button className="next-btn"
-                                variant="contained"
-                                disabled={!this.props.nextButtonActive}
-                                onClick={this.props.blogActions.nextPage}>Next</Button>
-                        </Grid>
-                    </Grid>
-                </div>
+                <BlogButtons
+                    prevButtonActive={this.props.prevButtonActive}
+                    nextButtonActive={this.props.nextButtonActive}
+                    prevPage={this.props.blogActions.prevPage}
+                    nextPage={this.props.blogActions.nextPage} />
             </div>);
     }
 }

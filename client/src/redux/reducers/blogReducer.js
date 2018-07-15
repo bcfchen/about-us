@@ -21,5 +21,6 @@ export default function blogReducer(state = initialState.ui, action) {
         default:
             break;
     }
+
     return newState || state;
 }
