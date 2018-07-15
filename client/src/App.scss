@@ -1,13 +1,10 @@
 @import "../node_modules/toastr/build/toastr.min.css";
-@import "../node_modules/react-select/dist/react-select.css";
-@import "styles/layout/weatherPage.scss";
-@import "styles/layout/currentWeatherIndicator.scss";
-@import "styles/layout/weatherForecastItem.scss";
-@import "styles/layout/weatherDetails.scss";
 @import "styles/layout/blogPage.scss";
+@import "styles/layout/blogSearch.scss";
+@import "styles/layout/blogPostList.scss";
 
 html {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
 }
 
 body {

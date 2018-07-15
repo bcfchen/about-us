@@ -1,83 +1,24 @@
 @import url(../node_modules/toastr/build/toastr.min.css);
-@import url(../node_modules/react-select/dist/react-select.css);
-.weather-body, .weather-body-day, .weather-body-night {
-  padding-top: 20px;
-  height: 100vh;
+.btns-container {
   text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
-  position: relative;
-  background: #bdc3c7;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  left: 0px; }
 
-.weather-body-day {
-  background: #f46b45;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #eea849, #f46b45);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #eea849, #f46b45);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+.blog-search-container {
+  text-align: right;
+  margin-right: 2rem;
+  margin-left: 2rem; }
 
-.weather-body-night {
-  background: #141E30;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #243B55, #141E30);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
-
-* {
-  margin: 0;
-  padding: 0; }
-
-body {
-  color: white; }
-
-.blur {
-  -webkit-filter: url(#blur-filter);
-  filter: url(#blur-filter);
-  -webkit-filter: blur(3px);
-  filter: blur(3px); }
-
-.toast-error {
-  background-color: #2f96b4; }
-
-.current-weather-indicator-container {
-  color: white;
-  text-align: center;
-  margin-bottom: 60px; }
-
-@-webkit-keyframes rotating {
-  from {
-    -webkit-transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg); } }
-
-.rotating {
-  -webkit-animation: rotating 2s linear infinite; }
-
-.weather-forecast-items-container {
-  max-width: 680px;
+.blog-post-list-container {
+  min-height: 400px;
+  max-width: 650px;
   margin-right: auto;
   margin-left: auto; }
-
-.forecast-low {
-  opacity: 0.4; }
-
-.weather-details-item-container {
-  max-width: 350px;
-  margin-right: auto;
-  margin-left: auto; }
-
-.buttons-container {
-  text-align: center; }
 
 html {
-  background-color: #f2f2f2; }
+  background-color: #ffffff; }
 
 body {
   -webkit-font-smoothing: antialiased;

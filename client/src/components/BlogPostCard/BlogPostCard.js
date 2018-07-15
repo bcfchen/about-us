@@ -1,17 +1,21 @@
 import React from "react";
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { propTypes } from './types';
+import { withStyles } from '@material-ui/core/styles';
+import { styles } from "./styles";
 
-const BlogPostCard = ({ post }) => {
-    return (<Card>
-        <CardContent>
-            <Typography variant="headline">{post.title}</Typography>
-            <Typography>{post.body}</Typography>
-        </CardContent>
-    </Card>);
+const BlogPostCard = ({ post, classes }) => {
+    return (
+        <Card className={classes.card}>
+            <CardContent>
+                <Typography className={classes.title} variant="title">{post.title}</Typography>
+                <Typography varient="body1">{post.body}</Typography>
+            </CardContent>
+        </Card>
+    );
 };
 
-export default BlogPostCard;
+BlogPostCard.propTypes = propTypes;
+export default withStyles(styles)(BlogPostCard);

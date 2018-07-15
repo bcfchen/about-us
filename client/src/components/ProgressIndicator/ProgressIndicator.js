@@ -13,7 +13,7 @@ const ProgressIndicator = ({ classes }) => {
 
 const styles = theme => ({
     progress: {
-        top: "40%",
+        top: "45%",
         left: "45%",
         position: "fixed",
         zIndex: "999"

@@ -3,20 +3,27 @@ import * as blogActions from "../../redux/actions/blogActions";
 import toast from "toastr";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
 import BlogPostList from "../../components/BlogPostList/BlogPostList";
 import BlogSearch from "../../components/BlogSearch/BlogSearch";
-import ProgressIndicator from "../../components/ProgressIndicator/ProgressIndicator";
-const LIST_SIZE = 10;
-class BlogPage extends React.Component {
+import BlogButtons from "../../components/BlogButtons/BlogButtons";
+import * as _ from 'lodash';
+import { propTypes } from './types';
+
+export class BlogPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isLoading: true };
+        this.updateSearchText = this.updateSearchText.bind(this);
+        this.updatePosts = _.debounce(this.updatePosts.bind(this), 300);
     }
 
     componentDidMount() {
-        this.props.blogActions.searchPostByText().then(() => {
+        this.updatePosts();
+    }
+
+    updatePosts(searchText) {
+        this.setState({ isLoading: true });
+        this.props.blogActions.searchPostByText(searchText).then(() => {
             this.setState({ isLoading: false })
         }).catch(err => {
             toast.error(err.message);
@@ -24,34 +31,37 @@ class BlogPage extends React.Component {
         });
     }
 
-
+    updateSearchText(searchText) {
+        this.props.blogActions.updateSearchText(searchText);
+    };
 
     render() {
         return (
             <div>
-                <BlogSearch />
-                {this.state.isLoading && <ProgressIndicator />}
-                <BlogPostList isLoading={this.state.isLoading} postsToRender={this.props.postsToRender} />
-                <div className="buttons-container">
-                    <Button variant="contained" >Prev</Button>
-                    <Button variant="contained" disabled={true}>Next</Button>
-                </div>
+                <BlogSearch searchText={this.props.searchText} updatePosts={this.updatePosts} updateSearchText={this.updateSearchText} />
+                <BlogPostList isLoading={this.state.isLoading} postsToRender={this.props.posts} />
+                <BlogButtons
+                    prevButtonActive={this.props.prevButtonActive}
+                    nextButtonActive={this.props.nextButtonActive}
+                    prevPage={this.props.blogActions.prevPage}
+                    nextPage={this.props.blogActions.nextPage} />
             </div>);
     }
 }
 
+const mapDispatchToProps = dispatch => {
+    return { blogActions: bindActionCreators(blogActions, dispatch) }
+};
+
 const mapStateToProps = (state, ownProps) => {
-    let postsToRender = state.blogPage.posts.slice(state.startIndex, LIST_SIZE);
+    let blogPageState = state.blogPage;
     return {
-        postsToRender,
-        startIndex: state.startIndex
+        posts: blogPageState.posts.slice(blogPageState.startIndex, blogPageState.endIndex),
+        prevButtonActive: blogPageState.prevButtonActive,
+        nextButtonActive: blogPageState.nextButtonActive,
+        searchText: blogPageState.searchText
     };
 };
 
-const mapDispatchToProps = dispatch => {
-    return {
-        blogActions: bindActionCreators(blogActions, dispatch)
-    }
-};
-
+BlogPage.propTypes = propTypes;
 export default connect(mapStateToProps, mapDispatchToProps)(BlogPage);
