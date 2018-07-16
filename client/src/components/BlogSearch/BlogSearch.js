@@ -1,8 +1,6 @@
 import React from "react";
 import TextField from '@material-ui/core/TextField';
-import { withStyles } from '@material-ui/core/styles';
 import { propTypes } from './types';
-import { styles } from "./styles";
 
 const BlogSearch = ({ searchText, updateSearchText, updatePosts, classes }) => {
     return (
@@ -10,7 +8,6 @@ const BlogSearch = ({ searchText, updateSearchText, updatePosts, classes }) => {
             <TextField
                 id="search-input"
                 value={searchText}
-                className={classes.textField}
                 onChange={e => { e.persist(); updateSearchText(e.target.value); updatePosts(e.target.value); }}
                 label="Search for posts"
                 type="search"
@@ -18,4 +15,4 @@ const BlogSearch = ({ searchText, updateSearchText, updatePosts, classes }) => {
 };
 
 BlogSearch.propTypes = propTypes;
-export default withStyles(styles)(BlogSearch);
+export default BlogSearch;
