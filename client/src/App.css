@@ -6,6 +6,14 @@
   width: 100%;
   left: 0px; }
 
+.blur {
+  -webkit-filter: url(#blur-filter);
+  filter: url(#blur-filter);
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-transition: 1s linear;
+  transition: 1 linear; }
+
 .blog-search-container {
   text-align: right;
   margin-right: 2rem;

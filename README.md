@@ -1,10 +1,11 @@
 # Blogger
-Application features:
+Application features & callouts:
 - Displays blog posts queried from https://jsonplaceholder.typicode.com/posts
 - Search for blog posts by text. Posts will be displayed if contains exact match of entered text
 - "Prev" and "Next" buttons to navigate between pages of posts available
 - Buttons are enabled/disabled depending on whether posts are avialable before/after current page
-- Note that unit and e2e tests were not included in this project. To view a more complete example of incorporating unit and e2e tests please see https://github.com/bcfchen/weatherman
+- Unit and e2e tests were not included in this project. To view a more complete example of incorporating unit and e2e tests please see https://github.com/bcfchen/weatherman
+- Development and testing were done on Chrome 67.0.3396.99
 
 ### To install
 Clone this repo with 

@@ -36,8 +36,9 @@ export class BlogPage extends React.Component {
     };
 
     render() {
+        let blurblur = this.state.isLoading ? "blur" : "";
         return (
-            <div>
+            <div className={blurblur}>
                 <BlogSearch searchText={this.props.searchText} updatePosts={this.updatePosts} updateSearchText={this.updateSearchText} />
                 <BlogPostList isLoading={this.state.isLoading} postsToRender={this.props.posts} />
                 <BlogButtons
