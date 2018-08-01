@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import BlogPage from '../workflows/BlogPage/BlogPage';
+import { AboutUs } from '../workflows/AboutUs/AboutUs';
 const theme = createMuiTheme({
     palette: {
         theme: "light"
@@ -13,7 +13,7 @@ class App extends Component {
         return (
             <MuiThemeProvider theme={theme}>
                 <div className="app">
-                    <BlogPage></BlogPage>
+                    <AboutUs></AboutUs>
                 </div>
             </MuiThemeProvider>
         );
