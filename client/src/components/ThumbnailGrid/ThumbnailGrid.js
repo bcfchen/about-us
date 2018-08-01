@@ -14,14 +14,14 @@ const styles = theme => ({
         backgroundColor: theme.palette.background.paper,
     },
     gridList: {
-        width: 500,
+        width: "100%",
         height: 450,
     },
     subheader: {
         width: '100%',
     },
     card: {
-        maxWidth: 345,
+        maxWidth: 200,
     },
     media: {
         height: 160,
@@ -32,7 +32,7 @@ const styles = theme => ({
 const ThumbnailGrid = ({ classes, thumbnailItems, itemClicked }) => {
     return (
         <div className={classes.root}>
-            <GridList cellHeight={160} className={classes.gridList} cols={3}>
+            <GridList cellHeight={160} className={classes.gridList} cols={5}>
                 {thumbnailItems.map(item => (
                     <GridListTile key={item.id} cols={1}>
                         <Card className={classes.card}>
