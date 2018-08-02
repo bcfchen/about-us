@@ -5,7 +5,7 @@ Application features & callouts:
 ### To install
 Clone this repo with 
 ```
-git clone https://github.com/bcfchen/about-us
+git clone https://github.com/bcfchen/poke-page
 ```
 cd into the __about-us/client__ folder and install npm packages by:
 ```
