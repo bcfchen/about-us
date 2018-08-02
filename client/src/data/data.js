@@ -21,7 +21,7 @@ export const items = [
         id: 4,
         img: 'https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png',
         name: "Bulbasaur",
-        description: "wtf is this"
+        description: "no one likes me :("
     },
     {
         id: 5,
@@ -33,13 +33,13 @@ export const items = [
         id: 6,
         img: 'https://cdn.bulbagarden.net/upload/thumb/a/ae/003Venusaur.png/250px-003Venusaur.png',
         name: "Venusaur",
-        description: "wtf is this"
+        description: "still no one likes me :("
     },
     {
         id: 7,
         img: 'https://cdn.bulbagarden.net/upload/thumb/0/02/009Blastoise.png/250px-009Blastoise.png',
         name: "Blastoise",
-        description: "turtle ate too much"
+        description: "turtle grew"
     },
     {
         id: 8,

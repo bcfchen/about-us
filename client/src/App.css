@@ -33,11 +33,15 @@ ul {
 
 .thumbnail-list img {
   display: block;
-  width: 100%; }
+  width: 80%;
+  -webkit-border-radius: 99em;
+  border-radius: 99em;
+  border: 5px solid #eee;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); }
 
 .thumbnail-list img:hover {
   transform: scale(1.1);
-  transition-duration: 0.75s; }
+  transition-duration: 0.4s; }
 
 ul {
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
@@ -49,23 +53,27 @@ ul {
 .panels-container {
   overflow: hidden;
   height: 300px;
-  width: 660px;
+  width: fit-content;
   margin-left: auto;
   margin-right: auto; }
 
 .example-enter {
-  opacity: 0.01; }
+  opacity: 0.01;
+  width: 0px; }
 
 .example-enter.example-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in; }
+  width: 200px;
+  transition: 700ms; }
 
 .example-leave {
-  opacity: 1; }
+  opacity: 1;
+  width: 100px; }
 
 .example-leave.example-leave-active {
   opacity: 0.01;
-  transition: opacity 300ms ease-in; }
+  width: 0px;
+  transition: 700ms; }
 
 html {
   background-color: #ddd; }

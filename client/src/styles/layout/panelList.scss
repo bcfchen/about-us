@@ -1,25 +1,72 @@
 .panels-container {
     overflow: hidden;
     height: 300px;
-    width:660px;
+    width:fit-content;
     margin-left: auto;
     margin-right: auto;
 }
-
 .example-enter {
     opacity: 0.01;
+    width: 0px;
   }
   
-.example-enter.example-enter-active {
+  .example-enter.example-enter-active {
     opacity: 1;
-    transition: opacity 500ms ease-in;
-}
-
-.example-leave {
+    width: 200px;
+    transition: 700ms;
+  }
+  
+  .example-leave {
     opacity: 1;
-}
-
-.example-leave.example-leave-active {
+    width: 100px;
+  }
+  
+  .example-leave.example-leave-active {
     opacity: 0.01;
-    transition: opacity 300ms ease-in;
-}
+    width: 0px;
+    transition: 700ms;
+  }
+
+// .example-enter {
+//     opacity: 0.01;
+//     width: 0;
+//   }
+  
+//   .example-enter.example-enter-active {
+//     opacity: 1;
+//     width: 220px;
+//     transition: 700ms;
+//   }
+  
+//   .example-leave {
+//     opacity: 1;
+//     // width: 220px;
+//   }
+  
+//   .example-leave.example-leave-active {
+//     opacity: 0.01;
+//     // width: 220px;
+//     transition: 700ms;
+//   }
+  
+
+// .example-enter {
+//     transform: translateX(-10%);
+//     opacity: 0.01;
+//     left:-200px;
+//   }
+  
+// .example-enter.example-enter-active {
+//     transform: translateX(0);
+//     opacity: 1;
+//     transition: all 500ms ease-in;
+// }
+
+// .example-leave {
+//     transform: translateX(0);
+// }
+
+// .example-leave.example-leave-active {
+//     transform: translateX(20%);
+//     transition: all 500ms  ease-out;
+// }

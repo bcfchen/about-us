@@ -1,12 +1,4 @@
 import React from "react";
-import * as blogActions from "../../redux/actions/blogActions";
-import toast from "toastr";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import BlogPostList from "../../components/BlogPostList/BlogPostList";
-import BlogSearch from "../../components/BlogSearch/BlogSearch";
-import BlogButtons from "../../components/BlogButtons/BlogButtons";
-import * as _ from 'lodash';
 import { propTypes } from './types';
 import PanelList from "../../components/PanelList/PanelList";
 import ThumbnailGrid from "../../components/ThumbnailGrid/ThumbnailGrid";
@@ -15,17 +7,28 @@ import { items } from "../../data/data";
 export class AboutUs extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { panelItems: [] };
+        this.state = { panelItems: items.slice(0, 3) };
         this.itemClicked = this.itemClicked.bind(this);
     }
 
     itemClicked = (item) => {
-        this.state.panelItems.length >= 3 ? this.state.panelItems.pop() : undefined;
         const poppedPanelItems = this.state.panelItems;
-        this.setState({ panelItems: [item, ...poppedPanelItems] });
+        if (poppedPanelItems.length >= 3) {
+            poppedPanelItems.pop();
+        }
+        poppedPanelItems.unshift(item);
+        this.setState({ panelItems: poppedPanelItems });
     };
 
     render() {
+        // flag the items that are already being displayed (selected)
+        const selectItemIds = this.state.panelItems.map(item => item.id);
+        items.forEach(item => {
+            item.isSelected = false;
+            if (selectItemIds.indexOf(item.id) > -1) {
+                item.isSelected = true;
+            }
+        });
         return (
             <div>
                 <PanelList panelItems={this.state.panelItems} />
@@ -34,5 +37,4 @@ export class AboutUs extends React.Component {
     }
 }
 
-// BlogPage.propTypes = propTypes;
 export default AboutUs;
