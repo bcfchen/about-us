@@ -1,78 +1,78 @@
 export const items = [
     {
         id: 1,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 1",
+        img: 'https://cdn.bulbagarden.net/upload/0/0d/025Pikachu.png',
+        name: "Pikachu",
         description: "yellow fat pokemon"
     },
     {
         id: 2,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 2",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/7/73/004Charmander.png',
+        name: "Charmander",
+        description: "fire spitting lizard"
     },
     {
         id: 3,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 3",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/thumb/3/39/007Squirtle.png/250px-007Squirtle.png',
+        name: "Squirtle",
+        description: "water shooting turtle"
     },
     {
         id: 4,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 4",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png',
+        name: "Bulbasaur",
+        description: "wtf is this"
     },
     {
         id: 5,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/7/7e/006Charizard.png',
+        name: "Charizard",
+        description: "this lizard scary"
     },
     {
         id: 6,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/thumb/a/ae/003Venusaur.png/250px-003Venusaur.png',
+        name: "Venusaur",
+        description: "wtf is this"
     },
     {
         id: 7,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/thumb/0/02/009Blastoise.png/250px-009Blastoise.png',
+        name: "Blastoise",
+        description: "turtle ate too much"
     },
     {
         id: 8,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/thumb/8/88/026Raichu.png/250px-026Raichu.png',
+        name: "Raichu",
+        description: "not so nice now"
     },
     {
         id: 9,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png',
+        name: "Mew",
+        description: "needs more food"
     },
     {
         id: 10,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png',
+        name: "Mew Two",
+        description: "mean cat"
     },
     {
         id: 11,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/4/4e/115Kangaskhan.png',
+        name: "Kangaskhan",
+        description: "bad kangaroo"
     },
     {
         id: 12,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/0/02/129Magikarp.png',
+        name: "Magikarp",
+        description: "big eyed fish"
     }, {
         id: 13,
-        img: 'https://qph.fs.quoracdn.net/main-qimg-32a41ae287d698c2687600dad3e309b6-c',
-        name: "pikachu 5",
-        description: "yellow fat pokemon"
+        img: 'https://cdn.bulbagarden.net/upload/8/8f/068Machamp.png',
+        name: "Machamp",
+        description: "basically the rock"
     }];

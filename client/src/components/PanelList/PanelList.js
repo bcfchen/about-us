@@ -2,25 +2,25 @@ import React from "react";
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Panel from "../Panel/Panel";
+import { CSSTransitionGroup } from 'react-transition-group';
 
 const PanelList = ({ panelItems }) => {
-    const listStyle = {
-        display: "flex",
-        flexDirection: "row",
-        padding: 0,
-        minHeight: 300
-    };
-
     const panelsExist = panelItems && panelItems.length > 0;
-
     const panels = panelsExist ? panelItems.map(panelItem =>
-        <ListItem key={panelItem.id} >
-            <Panel panelItem={panelItem}></Panel>
-        </ListItem>) : [];
+        <Panel panelItem={panelItem}></Panel>) : [];
 
-    return (<List style={listStyle}>
-        {panels}
-    </List>);
+    return (
+        <div className="panels-container">
+            <CSSTransitionGroup
+                transitionName="example"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnter={true}
+                transitionEnterTimeout={500}
+                transitionLeave={true}
+                transitionLeaveTimeout={300}>
+                {panels}
+            </CSSTransitionGroup></div>);
 };
 
 export default PanelList;

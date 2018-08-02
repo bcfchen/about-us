@@ -11,7 +11,7 @@ const styles = theme => ({
         flexWrap: 'wrap',
         justifyContent: 'space-around',
         overflow: 'hidden',
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: "#ddd",
     },
     gridList: {
         width: "100%",
@@ -30,21 +30,14 @@ const styles = theme => ({
 });
 
 const ThumbnailGrid = ({ classes, thumbnailItems, itemClicked }) => {
+    const listItems = thumbnailItems.map(thumbnailItem =>
+        <li><img src={thumbnailItem.img} onClick={() => itemClicked(thumbnailItem)} /></li>);
+
     return (
         <div className={classes.root}>
-            <GridList cellHeight={160} className={classes.gridList} cols={5}>
-                {thumbnailItems.map(item => (
-                    <GridListTile key={item.id} cols={1}>
-                        <Card className={classes.card}>
-                            <CardMedia
-                                onClick={() => itemClicked(item)}
-                                image={item.img}
-                                className={classes.media}>
-                            </CardMedia>
-                        </Card>
-                    </GridListTile>
-                ))}
-            </GridList>
+            <ul className="thumbnail-list">
+                {listItems}
+            </ul>
         </div>
     );
 };

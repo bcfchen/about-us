@@ -2,9 +2,11 @@
 @import "styles/layout/blogPage.scss";
 @import "styles/layout/blogSearch.scss";
 @import "styles/layout/blogPostList.scss";
+@import "styles/layout/thumbnailGrid.scss";
+@import "styles/layout/panelList.scss";
 
 html {
-    background-color: #ffffff;
+    background-color: #ddd;
 }
 
 body {

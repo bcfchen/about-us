@@ -7,7 +7,11 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
     card: {
-        maxWidth: 345
+        width: 200,
+        height: 300,
+        float: "left",
+        marginLeft: 10,
+        marginRight: 10
     },
     media: {
         height: 100,

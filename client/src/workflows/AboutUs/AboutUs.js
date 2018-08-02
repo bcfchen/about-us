@@ -20,11 +20,12 @@ export class AboutUs extends React.Component {
     }
 
     itemClicked = (item) => {
-        this.setState({ panelItems: [item, ...this.state.panelItems] });
+        this.state.panelItems.length >= 3 ? this.state.panelItems.pop() : undefined;
+        const poppedPanelItems = this.state.panelItems;
+        this.setState({ panelItems: [item, ...poppedPanelItems] });
     };
 
     render() {
-        // let blurblur = this.state.isLoading ? "blur" : "";
         return (
             <div>
                 <PanelList panelItems={this.state.panelItems} />
