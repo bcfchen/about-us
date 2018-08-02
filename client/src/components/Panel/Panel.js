@@ -12,6 +12,7 @@ const styles = {
         float: "left",
         marginLeft: 10,
         marginRight: 10
+
     },
     media: {
         height: 100,

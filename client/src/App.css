@@ -1,29 +1,8 @@
-@import url(../node_modules/toastr/build/toastr.min.css);
-.btns-container {
-  text-align: center;
-  position: fixed;
-  bottom: 20px;
-  width: 100%;
-  left: 0px; }
-
-.blur {
+.blurry {
   -webkit-filter: url(#blur-filter);
   filter: url(#blur-filter);
   -webkit-filter: blur(3px);
-  filter: blur(3px);
-  -webkit-transition: 1s linear;
-  transition: 1 linear; }
-
-.blog-search-container {
-  text-align: right;
-  margin-right: 2rem;
-  margin-left: 2rem; }
-
-.blog-post-list-container {
-  min-height: 400px;
-  max-width: 650px;
-  margin-right: auto;
-  margin-left: auto; }
+  filter: blur(3px); }
 
 ul {
   list-style: none;
@@ -32,11 +11,12 @@ ul {
   padding: 1rem; }
 
 .thumbnail-list img {
+  background-color: white;
   display: block;
   width: 80%;
   -webkit-border-radius: 99em;
   border-radius: 99em;
-  border: 5px solid #eee;
+  border: 5px solid white;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3); }
 
 .thumbnail-list img:hover {
@@ -54,30 +34,33 @@ ul {
   overflow: hidden;
   height: 300px;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 50px auto; }
 
-.example-enter {
+.panels-enter {
   opacity: 0.01;
   width: 0px; }
 
-.example-enter.example-enter-active {
+.panels-enter.panels-enter-active {
   opacity: 1;
   width: 200px;
   transition: 700ms; }
 
-.example-leave {
-  opacity: 1;
-  width: 100px; }
-
-.example-leave.example-leave-active {
+.panels-leave.panels-leave-active {
   opacity: 0.01;
   width: 0px;
   transition: 700ms; }
 
-html {
-  background-color: #ddd; }
+.main-container {
+  padding-top: 20px;
+  height: 100vh;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  position: relative;
+  background: #B24592;
+  /* fallback for old browsers */
+  background: linear-gradient(to bottom, #B24592, #F15F79); }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+* {
+  margin: 0;
+  padding: 0; }

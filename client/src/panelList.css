@@ -2,23 +2,18 @@
   overflow: hidden;
   height: 300px;
   width: fit-content;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 50px auto; }
 
-.example-enter {
+.panels-enter {
   opacity: 0.01;
   width: 0px; }
 
-.example-enter.example-enter-active {
+.panels-enter.panels-enter-active {
   opacity: 1;
   width: 200px;
   transition: 700ms; }
 
-.example-leave {
-  opacity: 1;
-  width: 100px; }
-
-.example-leave.example-leave-active {
+.panels-leave.panels-leave-active {
   opacity: 0.01;
   width: 0px;
   transition: 700ms; }

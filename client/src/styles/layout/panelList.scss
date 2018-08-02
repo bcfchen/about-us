@@ -2,71 +2,23 @@
     overflow: hidden;
     height: 300px;
     width:fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto;
 }
-.example-enter {
+.panels-enter {
     opacity: 0.01;
     width: 0px;
-  }
+}
   
-  .example-enter.example-enter-active {
+.panels-enter.panels-enter-active {
     opacity: 1;
     width: 200px;
     transition: 700ms;
-  }
+}
   
-  .example-leave {
-    opacity: 1;
-    width: 100px;
-  }
+.panels-leave {}
   
-  .example-leave.example-leave-active {
+.panels-leave.panels-leave-active {
     opacity: 0.01;
     width: 0px;
     transition: 700ms;
-  }
-
-// .example-enter {
-//     opacity: 0.01;
-//     width: 0;
-//   }
-  
-//   .example-enter.example-enter-active {
-//     opacity: 1;
-//     width: 220px;
-//     transition: 700ms;
-//   }
-  
-//   .example-leave {
-//     opacity: 1;
-//     // width: 220px;
-//   }
-  
-//   .example-leave.example-leave-active {
-//     opacity: 0.01;
-//     // width: 220px;
-//     transition: 700ms;
-//   }
-  
-
-// .example-enter {
-//     transform: translateX(-10%);
-//     opacity: 0.01;
-//     left:-200px;
-//   }
-  
-// .example-enter.example-enter-active {
-//     transform: translateX(0);
-//     opacity: 1;
-//     transition: all 500ms ease-in;
-// }
-
-// .example-leave {
-//     transform: translateX(0);
-// }
-
-// .example-leave.example-leave-active {
-//     transform: translateX(20%);
-//     transition: all 500ms  ease-out;
-// }
+}

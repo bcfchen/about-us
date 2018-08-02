@@ -4,7 +4,7 @@ import PanelList from "../../components/PanelList/PanelList";
 import ThumbnailGrid from "../../components/ThumbnailGrid/ThumbnailGrid";
 import { items } from "../../data/data";
 
-export class AboutUs extends React.Component {
+export class PokePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = { panelItems: items.slice(0, 3) };
@@ -30,11 +30,11 @@ export class AboutUs extends React.Component {
             }
         });
         return (
-            <div>
+            <div className="main-container">
                 <PanelList panelItems={this.state.panelItems} />
                 <ThumbnailGrid itemClicked={this.itemClicked} thumbnailItems={items} />
             </div>);
     }
 }
 
-export default AboutUs;
+export default PokePage;

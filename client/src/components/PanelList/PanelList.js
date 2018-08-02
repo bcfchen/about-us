@@ -4,13 +4,14 @@ import { CSSTransitionGroup } from 'react-transition-group';
 
 const PanelList = ({ panelItems }) => {
     const panelsExist = panelItems && panelItems.length > 0;
-    const panels = panelsExist ? panelItems.map(panelItem =>
-        <Panel key={panelItem.id} panelItem={panelItem}></Panel>) : [];
+    const panels = panelsExist ?
+        panelItems.map(panelItem =>
+            <Panel key={panelItem.id} panelItem={panelItem}></Panel>) : [];
 
     return (
         <div className="panels-container">
             <CSSTransitionGroup
-                transitionName="example"
+                transitionName="panels"
                 transitionEnterTimeout={700}
                 transitionLeaveTimeout={700}>
                 {panels}

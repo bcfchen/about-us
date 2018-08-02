@@ -1,15 +1,8 @@
-@import "../node_modules/toastr/build/toastr.min.css";
-@import "styles/layout/blogPage.scss";
-@import "styles/layout/blogSearch.scss";
-@import "styles/layout/blogPostList.scss";
 @import "styles/layout/thumbnailGrid.scss";
 @import "styles/layout/panelList.scss";
+@import "styles/layout/pokePage.scss";
 
-html {
-    background-color: #ddd;
-}
-
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
 }

@@ -39,7 +39,7 @@ export const items = [
         id: 7,
         img: 'https://cdn.bulbagarden.net/upload/thumb/0/02/009Blastoise.png/250px-009Blastoise.png',
         name: "Blastoise",
-        description: "turtle grew"
+        description: "my turtle grew"
     },
     {
         id: 8,
