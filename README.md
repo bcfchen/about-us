@@ -1,4 +1,4 @@
-# about-us
+# poke-page
 Application features & callouts:
 
 
@@ -22,3 +22,4 @@ The page should automatically open up in your browser at __localhost:3000__
 ### Main libraries & services used
 - __React__
 - __Material-ui__ for components and typography
+- __ReactTransitionGroup__ for animations in React
