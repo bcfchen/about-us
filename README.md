@@ -1,6 +1,5 @@
 # poke-page
-![Poke Page Gif](https://s8.postimg.cc/3n4hugy3p/poke-page_1.gif, "Poke Page")
-
+[![poke-page_1.gif](https://s8.postimg.cc/3n4hugy3p/poke-page_1.gif)](https://postimg.cc/image/m2oyrvc81/)
 ### To install
 Clone this repo with 
 ```
