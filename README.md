@@ -1,6 +1,5 @@
 # poke-page
-Application features & callouts:
-
+![](https://s8.postimg.cc/taw0354n9/Screen_Shot_2018-08-02_at_9.21.39_PM.png "Poke Page")
 
 ### To install
 Clone this repo with 
