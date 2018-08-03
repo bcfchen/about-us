@@ -7,13 +7,13 @@ Clone this repo with
 ```
 git clone https://github.com/bcfchen/poke-page
 ```
-cd into the __about-us/client__ folder and install npm packages by:
+cd into the __poke-page/client__ folder and install npm packages by:
 ```
 npm install
 ```
 
 ### To run
-Check that you're in the __about-us/client__ folder and run the project by:
+Check that you're in the __poke-page/client__ folder and run the project by:
 ```
 npm start
 ```
