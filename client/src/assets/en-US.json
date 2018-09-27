@@ -1,0 +1,20 @@
+{
+    "overview": {
+        "intro": "JNTO celebrates Kansai International Airport",
+        "body": "in order to revitalize"
+    },
+    "campaign": {
+        "letThemKnow": "LET THEM KNOW",
+        "letThemCome": "LET THEM COME",
+        "letThemExplore": "LET THEM EXPLORE",
+        "letThemEnjoy": "LET THEM ENJOY",
+        "campaign1": {
+            "title": "Campaign Title 1",
+            "summary": "Campaign summary 1"
+        },
+        "campaign2": {
+            "title": "Campaign Title 2",
+            "summary": "Campaign summary 2"
+        }
+    }
+}

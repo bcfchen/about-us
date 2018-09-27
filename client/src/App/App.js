@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import { PokePage } from '../workflows/PokePage/PokePage';
+import ReactIntlUnivWrapper from '../components/Localization/ReactIntlUnivWrapper/ReactIntlUnivWrapper';
+import Revival from "../workflows/Revival/Revival";
+
 const theme = createMuiTheme({
     palette: {
         theme: "light"
@@ -11,11 +13,13 @@ const theme = createMuiTheme({
 class App extends Component {
     render() {
         return (
-            <MuiThemeProvider theme={theme}>
-                <div className="app">
-                    <PokePage />
-                </div>
-            </MuiThemeProvider>
+            <ReactIntlUnivWrapper>
+                <MuiThemeProvider theme={theme}>
+                    <div className="app">
+                        <Revival />
+                    </div>
+                </MuiThemeProvider>
+            </ReactIntlUnivWrapper>
         );
     }
 }
